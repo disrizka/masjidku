@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:masjidku/features/auth/screens/register/register_screen.dart';
-import 'package:masjidku/features/home/bottom_navigation_bar.dart';
+import 'package:masjidku/pages/auth/screens/register/screens/register_screen.dart';
+import 'package:masjidku/pages/main/screens/bottom_navigation_bar.dart';
 import 'package:masjidku/utils/constant/app_color.dart';
 import 'package:masjidku/utils/constant/app_font.dart';
+import 'package:masjidku/utils/constant/app_image.dart';
 
 class MasjidKuApp extends StatefulWidget {
   const MasjidKuApp({super.key});
@@ -29,7 +30,7 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(24),
+          padding: EdgeInsets.all(24),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -38,11 +39,15 @@ class LoginScreen extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Icon(Icons.mosque, color: Colors.amber),
+                      Image.asset(
+                        AppImage.logo,
+                        height: 25,
+                        fit: BoxFit.contain,
+                      ),
                       SizedBox(width: 8),
                       Text(
                         'Masjid Ku',
-                        style: plusJakartaTextStyle.bold.copyWith(
+                        style: PoppinsTextStyle.bold.copyWith(
                           fontSize: 25,
                           color: const Color.fromARGB(255, 0, 0, 0),
                         ),
@@ -56,7 +61,7 @@ class LoginScreen extends StatelessWidget {
 
               Text(
                 'Ahlan Wa Sahlan !',
-                style: plusJakartaTextStyle.semiBold.copyWith(
+                style: PoppinsTextStyle.semiBold.copyWith(
                   fontSize: 22,
                   color: AppColor.primaryColor,
                 ),
@@ -64,7 +69,7 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(height: 10),
               Text(
                 'Alhamdulillah bisa bertemu kembali, Login untuk melanjutkan pembelajaran',
-                style: plusJakartaTextStyle.medium.copyWith(
+                style: PoppinsTextStyle.medium.copyWith(
                   fontSize: 16,
                   color: Color.fromARGB(255, 0, 0, 0),
                 ),
@@ -157,9 +162,9 @@ class LoginScreen extends StatelessWidget {
                   ),
                   child: Text(
                     'Login',
-                    style: plusJakartaTextStyle.bold.copyWith(
+                    style: PoppinsTextStyle.bold.copyWith(
                       fontSize: 16,
-                      color: AppColor.secondaryColor,
+                      color: AppColor.backgroundColor,
                     ),
                   ),
                 ),

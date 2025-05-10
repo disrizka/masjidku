@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:masjidku/pages/auth/screens/login/screens/login_screen.dart';
 import 'package:masjidku/utils/constant/app_color.dart';
 import 'package:masjidku/utils/constant/app_font.dart';
+import 'package:masjidku/utils/constant/app_image.dart';
 
 class RegisterScreen extends StatefulWidget {
   @override
@@ -15,22 +17,25 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Padding(
+        child: SingleChildScrollView(
           padding: EdgeInsets.all(24),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Logo dan Nama Aplikasi
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(
                     children: [
-                      Icon(Icons.mosque, color: Colors.amber),
+                      Image.asset(
+                        AppImage.logo,
+                        height: 25,
+                        fit: BoxFit.contain,
+                      ),
                       SizedBox(width: 8),
                       Text(
                         'Masjid Ku',
-                        style: plusJakartaTextStyle.bold.copyWith(
+                        style: PoppinsTextStyle.bold.copyWith(
                           fontSize: 25,
                           color: const Color.fromARGB(255, 0, 0, 0),
                         ),
@@ -45,7 +50,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               // Judul
               Text(
                 'Daftar dengan Email',
-                style: plusJakartaTextStyle.semiBold.copyWith(
+                style: PoppinsTextStyle.semiBold.copyWith(
                   fontSize: 22,
                   color: AppColor.primaryColor,
                 ),
@@ -53,8 +58,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
               SizedBox(height: 8),
               Text(
                 'Untuk proses lebih lanjut mohon\nlengkapi data berikut',
-                style: plusJakartaTextStyle.medium.copyWith(
-                  fontSize: 18,
+                style: PoppinsTextStyle.medium.copyWith(
+                  fontSize: 16,
                   color: Color.fromARGB(255, 0, 0, 0),
                 ),
               ),
@@ -96,9 +101,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => LoginScreen()),
+                    );
+                  },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFF92883A),
+                    backgroundColor: AppColor.primaryColor,
                     padding: EdgeInsets.symmetric(vertical: 16),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
@@ -106,9 +116,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                   child: Text(
                     'Registrasi',
-                    style: plusJakartaTextStyle.bold.copyWith(
+                    style: PoppinsTextStyle.bold.copyWith(
                       fontSize: 16,
-                      color: AppColor.secondaryColor,
+                      color: AppColor.backgroundColor,
                     ),
                   ),
                 ),

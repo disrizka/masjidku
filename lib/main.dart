@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:masjidku/features/auth/screens/introduction/introduction_screen.dart';
+import 'package:masjidku/pages/auth/screens/introduction/screens/introduction_screen.dart';
 
 void main() {
   runApp(const MyApp());

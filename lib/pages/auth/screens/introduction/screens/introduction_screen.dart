@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:masjidku/features/auth/screens/login/login_screen.dart';
+import 'package:masjidku/pages/auth/screens/login/screens/login_screen.dart';
 import 'package:masjidku/utils/constant/app_color.dart';
 import 'package:masjidku/utils/constant/app_font.dart';
 import 'package:masjidku/utils/constant/app_image.dart';
@@ -18,7 +18,7 @@ class _IntroScreenState extends State<IntroScreen> {
   @override
   Widget build(BuildContext context) {
     return IntroductionScreen(
-      globalBackgroundColor: AppColor.secondaryColor,
+      globalBackgroundColor: AppColor.backgroundColor,
       key: introKey,
       pages: [
         PageViewModel(
@@ -34,8 +34,8 @@ class _IntroScreenState extends State<IntroScreen> {
                 SizedBox(height: 40),
                 Text(
                   "Mulai Perjalanan Menuntut Ilmu",
-                  textAlign: TextAlign.left,
-                  style: plusJakartaTextStyle.semiBold.copyWith(
+                  textAlign: TextAlign.center,
+                  style: PoppinsTextStyle.bold.copyWith(
                     fontSize: 22,
                     color: AppColor.primaryColor,
                   ),
@@ -44,8 +44,8 @@ class _IntroScreenState extends State<IntroScreen> {
                 Text(
                   "Komitmen kami memudahkan kaum muslimin untuk belajar agama dan bahasa Arab dimanapun.",
                   textAlign: TextAlign.center,
-                  style: plusJakartaTextStyle.medium.copyWith(
-                    fontSize: 18,
+                  style: PoppinsTextStyle.regular.copyWith(
+                    fontSize: 16,
                     color: Color.fromARGB(255, 0, 0, 0),
                   ),
                 ),
@@ -63,7 +63,7 @@ class _IntroScreenState extends State<IntroScreen> {
                     ),
                     child: Text(
                       'Lanjut',
-                      style: plusJakartaTextStyle.medium.copyWith(
+                      style: PoppinsTextStyle.medium.copyWith(
                         fontSize: 16,
                         color: AppColor.secondaryColor,
                       ),
@@ -88,7 +88,7 @@ class _IntroScreenState extends State<IntroScreen> {
                 Text(
                   "Perjalanan Akan Terasa Menyenangkan",
                   textAlign: TextAlign.center,
-                  style: plusJakartaTextStyle.semiBold.copyWith(
+                  style: PoppinsTextStyle.bold.copyWith(
                     fontSize: 22,
                     color: AppColor.primaryColor,
                   ),
@@ -97,8 +97,8 @@ class _IntroScreenState extends State<IntroScreen> {
                 Text(
                   "Kami menyediakan sistem belajar yang menarik agar peserta merasa senang.",
                   textAlign: TextAlign.center,
-                  style: plusJakartaTextStyle.medium.copyWith(
-                    fontSize: 18,
+                  style: PoppinsTextStyle.regular.copyWith(
+                    fontSize: 16,
                     color: Color.fromARGB(255, 0, 0, 0),
                   ),
                 ),
@@ -116,7 +116,7 @@ class _IntroScreenState extends State<IntroScreen> {
                     ),
                     child: Text(
                       'Lanjut',
-                      style: plusJakartaTextStyle.medium.copyWith(
+                      style: PoppinsTextStyle.medium.copyWith(
                         fontSize: 16,
                         color: AppColor.secondaryColor,
                       ),
@@ -141,7 +141,7 @@ class _IntroScreenState extends State<IntroScreen> {
                 Text(
                   "Belajar Islam dan Bahasa Arab Sesuai Keinginanmu",
                   textAlign: TextAlign.center,
-                  style: plusJakartaTextStyle.semiBold.copyWith(
+                  style: PoppinsTextStyle.bold.copyWith(
                     fontSize: 22,
                     color: AppColor.primaryColor,
                   ),
@@ -150,8 +150,8 @@ class _IntroScreenState extends State<IntroScreen> {
                 Text(
                   "Mau belajar dari dasar ? Ingin memperdalam berbagai cabang ilmu islam seperti Fiqh Syafi’i ? atau mau memilih belajar tingkat lanjut ? ",
                   textAlign: TextAlign.center,
-                  style: plusJakartaTextStyle.medium.copyWith(
-                    fontSize: 18,
+                  style: PoppinsTextStyle.regular.copyWith(
+                    fontSize: 16,
                     color: Color.fromARGB(255, 0, 0, 0),
                   ),
                 ),
@@ -169,7 +169,7 @@ class _IntroScreenState extends State<IntroScreen> {
                     ),
                     child: Text(
                       'Lanjut',
-                      style: plusJakartaTextStyle.medium.copyWith(
+                      style: PoppinsTextStyle.medium.copyWith(
                         fontSize: 16,
                         color: AppColor.secondaryColor,
                       ),
@@ -200,7 +200,7 @@ class _IntroScreenState extends State<IntroScreen> {
         activeColor: AppColor.primaryColor,
         color: AppColor.primaryColor.withOpacity(0.3),
         size: const Size(10.0, 10.0),
-        activeSize: const Size(22.0, 10.0),
+        activeSize: const Size(15.0, 10.0),
         activeShape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(25.0),
         ),
